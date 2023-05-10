@@ -19,17 +19,25 @@ class CarController extends Controller
         return view('cars.create');
     }
 
+    // app/Http/Controllers/CarController.php
+
+    public function landing()
+    {
+        return view('pages.landing');
+    }
+
+
     public function store(Request $request)
     {
         $car = new Car;
 
-        $car->make = $request->make;
-        $car->model = $request->model;
-        $car->year = $request->year;
-        $car->daily_rate = $request->daily_rate;
-        $car->thumbnail = $request->thumbnail;
-        $car->description = $request->description;
-        $car->available = $request->available;
+        $car->make = $request->input('make');
+        $car->model = $request->input('model');
+        $car->year = $request->input('year');
+        $car->daily_rate = $request->input('daily_rate');
+        $car->thumbnail = $request->input('thumbnail');
+        $car->description = $request->input('description');
+        $car->available = $request->input('available');
         $car->created_by = auth()->user()->id;
 
         $car->save();
@@ -44,13 +52,13 @@ class CarController extends Controller
 
     public function update(Request $request, Car $car)
     {
-        $car->make = $request->make;
-        $car->model = $request->model;
-        $car->year = $request->year;
-        $car->daily_rate = $request->daily_rate;
-        $car->thumbnail = $request->thumbnail;
-        $car->description = $request->description;
-        $car->available = $request->available;
+        $car->make = $request->input('make');
+        $car->model = $request->input('model');
+        $car->year = $request->input('year');
+        $car->daily_rate = $request->input('daily_rate');
+        $car->thumbnail = $request->input('thumbnail');
+        $car->description = $request->input('description');
+        $car->available = $request->input('available');
 
         $car->save();
 
