@@ -27,6 +27,12 @@ class CarController extends Controller
     }
 
 
+    public function home()
+    {
+        return view('pages.home');
+    }
+
+
     public function store(Request $request)
     {
         $car = new Car;

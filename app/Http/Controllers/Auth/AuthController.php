@@ -54,9 +54,7 @@ class AuthController extends Controller
             'password' => bcrypt($validatedData['password']),
         ]);
 
-        // You can add additional logic here, such as sending a welcome email to the user
-
-        // Log in the newly registered user
+     
         Auth::login($user);
 
         return redirect('/home');

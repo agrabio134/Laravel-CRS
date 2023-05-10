@@ -3,21 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\Auth\AuthController;
-use App\Http\Controllers\Controller;
 
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
-Route::get('/home', [CarController::class, 'landing'])->name('landing');
+Route::get('/', [CarController::class, 'landing'])->name('landing');
 
 Route::get('/cars', [CarController::class, 'index'])->name('cars.index');
 Route::get('/cars/create', [CarController::class, 'create'])->name('cars.create');
@@ -25,9 +14,9 @@ Route::post('/cars', [CarController::class, 'store'])->name('cars.store');
 Route::get('/cars/{car}/edit', [CarController::class, 'edit'])->name('cars.edit');
 Route::put('/cars/{car}', [CarController::class, 'update'])->name('cars.update');
 Route::delete('/cars/{car}', [CarController::class, 'destroy'])->name('cars.destroy');
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 /// Login Routes
 // Login Routes
@@ -39,6 +28,9 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/register', [AuthController::class, 'showRegistrationForm'])->name('register');
 Route::post('/register', [AuthController::class, 'register'])->name('register.post');
 
+
+
+Route::get('/home', [CarController::class, 'home'])->name('home');
 
 // Password Reset Routes
 Route::get('/password/reset', [AuthController::class, 'showLinkRequestForm'])->name('password.request');
