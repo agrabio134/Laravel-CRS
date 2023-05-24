@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'BrittanySignature';
+    src: url(./Fonts/BrittanySignature.ttf);
+}
+@font-face{
+    font-family: 'Montserrat-medium';
+    src: url(./Fonts/Montserrat-Medium.ttf);
+}
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url(./Fonts/Montserrat-Bold.ttf);
+}
+@font-face {
+    font-family: 'Autography';
+    src: url(./Fonts/Autography.otf);
+}
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url(./Fonts/Montserrat-Regular.ttf);
+}

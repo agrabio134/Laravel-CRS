@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Car;
+use App\Models\Rental;
+
+
 
 class CarController extends Controller
 {
@@ -13,6 +16,8 @@ class CarController extends Controller
 
         return view('cars.index', compact('cars'));
     }
+
+
 
     public function create()
     {
@@ -27,10 +32,29 @@ class CarController extends Controller
     }
 
 
-    public function home()
+    public function about()
     {
-        return view('pages.home');
+        return view('pages.about');
     }
+
+
+    public function tracking()
+    {
+        $user = auth()->user();
+        $rentals = Rental::where('customer_id', $user->id)->get();
+
+        return view('pages.tracking', compact('rentals'));
+    }
+
+
+
+    public function cars()
+    {
+        $cars = Car::all();
+
+        return view('pages.cars', compact('cars'));
+    }
+
 
 
     public function store(Request $request)

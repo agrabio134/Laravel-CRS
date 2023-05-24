@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/body.css">
+    <link rel="stylesheet" href="/font.css">
+    <link rel="icon" href="./icons8-car-64.png">
+
+    <title>Car Rental</title>
+</head>
+
+<body>
+    <header>
+        <div class="car_logo">
+            <span><img src="/icons8-car-64.png"></span>
+            <div class="logo_head">
+                <h4 class="logo">CAR</h4>
+                <h3 class="logo">RENTAL SERVICES</h3>
+            </div>
+        </div>
+
+        <section class="menu">
+            <ul class="menu-list">
+                <li><a href="/Index.html">Home</a> </li>
+                <li class="active">Cars</li>
+                <li><a href="/about.html">About Us</a></li>
+            </ul>
+
+            <button>
+                <i class="fas fa-times"></i>
+                <i class="fas fa-bars"></i>
+            </button>
+        </section>
+    </header>
+
+    <div class="car_container">
+        <div class="card_cont">
+            <img src="./car images/car1.jpg">
+            <b class="car_name">Mitsubishi Outlander</b>
+            <div class="money">
+                <b>₱2,000 / Per Day</b>
+            </div>
+            <p class="desc_car">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups</p>
+            <div class="read_more">
+                <a href="">READ MORE</a>
+            </div>
+        </div>
+        <div class="card_cont">
+            <img src="./car images/car2.jpg">
+            <b class="car_name">BMW</b>
+            <div class="money">
+                <b>₱2,000 / Per Day</b>
+            </div>
+            <p class="desc_car">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups</p>
+            <div class="read_more">
+                <a href="">READ MORE</a>
+            </div>
+        </div>
+        <div class="card_cont">
+            <img src="./car images/car3.jpg">
+            <b class="car_name">Mitsubishi Outlander</b>
+            <div class="money">
+                <b>₱2,000 / Per Day</b>
+            </div>
+            <p class="desc_car">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups</p>
+            <div class="read_more">
+                <a href="">READ MORE</a>
+            </div>
+        </div>
+        <div class="card_cont">
+            <img src="./car images/car4.jpg">
+            <b class="car_name">Mitsubishi Outlander</b>
+            <div class="money">
+                <b>₱2,000 / Per Day</b>
+            </div>
+            <p class="desc_car">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts
+            and visual mockups</p>
+            <div class="read_more">
+                <a href="">READ MORE</a>
+            </div>
+        </div>
+    </div>
+   
+
+   
+
+
+</body>
+<script>
+    var menu = document.querySelector('.menu');
+    var menuBtn = document.querySelector('.menu button');
+    menuBtn.addEventListener('click', () => {
+        menu.classList.toggle('opened')
+    })
+</script>
+</html>

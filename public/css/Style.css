@@ -306,3 +306,72 @@ header .logo
   display: flex;
   gap: 10px;
 }
+
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.menu-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.welcome {
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.logout-form {
+  margin: 0;
+}
+
+.logout-form button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.logout-form button:hover {
+  background-color: #d32f2f;
+}
+
+.menu-toggle {
+  display: none;
+  /* Add appropriate styles for your menu toggle button */
+}
+
+
+/* Add appropriate styles for your responsive navigation menu */
+@media (max-width: 768px) {
+  .menu-list {
+      display: none;
+  }
+
+  .menu-toggle {
+      display: block;
+  }
+}

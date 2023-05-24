@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Style.css">
+    <link rel="stylesheet" href="/font.css">
+    <link rel="icon" href="./icons8-car-64.png">
+
+    <title>Car Rental</title>
+</head>
+
+<body>
+    <section class="showcase">
+        <header>
+            <div class="car_logo">
+                <span><img class="carimg" src="/icons8-car-64.png"></span>
+                <div class="logo_head">
+                    <h4 class="logo">CAR</h4>
+                    <h3 class="logo">RENTAL SERVICES</h3>
+                </div>
+            </div>
+            <div class="toggle"></div>
+        </header>
+        <img class="main_img" src="/pexels-alexandra-bakhareva-8563080.jpg" muted loop autoplay></img>
+        <div class="overlay"></div>
+        <div class="text">
+            <h2>Never Stop To </h2>
+            <h3>Exploring The World</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.</p>
+            <a href="/body.html">Explore</a>
+            <a href="/signup.html">Sign up</a>
+            <a class="open-button" onclick="openForm()" href="#">Login</a>
+
+                <!-- <button >Open Form</button> -->
+                
+                <div class="form-popup" id="myForm">
+                    <form action="" class="form-container">
+                        <h1 class="login_form">Login</h1>
+                
+                        <label class="input_form" for="email"><b>Email</b></label>
+                        <input type="text" placeholder="Enter Email" name="email" required>
+                
+                        <label class="input_form" for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+                        <div class="button_forms">
+                            <button type="submit" class="btn">Login</button>
+                            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                        </div>
+                        
+                    </form>
+                </div>
+
+        </div>
+        <ul class="social">
+            <li><a href="#"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a></li>
+            <li><a href="#"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a></li>
+            <li><a href="#"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
+        </ul>
+    </section>
+    <div class="menu">
+        <ul>
+            <li><a href="/Index.html">Home</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Destination</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+</body>
+<script src="/script.js"></script>
+<script>
+    function openForm() {
+        document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+    }
+</script>
+</html>
